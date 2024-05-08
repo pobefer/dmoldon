@@ -1,0 +1,102 @@
+---
+import Python from "./Icons/Python.astro"
+import Chatbot from "./Icons/Chatbot.astro"
+import NextJS from "./Icons/NextJS.astro"
+import Tailwind from "./Icons/Tailwind.astro"
+import AstroSVG from "./Icons/AstroSVG.astro"
+import CSHARP from "./Icons/CSHARP.astro"
+import Git from "./Icons/Git.astro"
+import Java from "./Icons/Java.astro"
+
+const TAGS = {
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#003159] text-white",
+    icon: Python,
+  },
+  CHATBOT: {
+    name: "Chatbot",
+    class: "bg-[#003159] text-white",
+    icon: Chatbot,
+  },
+  NEXTJS: {
+    name: "NextJS",
+    class: "bg-[#003159] text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind css",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  GIT: {
+    name: "Git",
+    class: "bg-[#003159] text-white",
+    icon: Git,
+  },
+  CSHARP: {
+    name: "C#",
+    class: "bg-[#003159] text-white",
+    icon: CSHARP,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#003159] text-white",
+    icon: Java,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#003159] text-white",
+    icon: AstroSVG,
+  },
+}
+
+const tableElements = [
+    {
+        tag: TAGS.PYTHON,
+        level: "Expert",
+    },
+    {
+        tag: TAGS.ASTRO,
+        level: "Advanced",
+    },
+    {
+        tag: TAGS.JAVA,
+        level: "Expert",
+    },
+    {
+        tag: TAGS.GIT,
+        level: "Expert",
+    },
+    {
+        tag: TAGS.CSHARP,
+        level: "Expert",
+    },
+    {
+        tag: TAGS.CHATBOT,
+        level: "Advanced",
+    },
+    {
+        tag: TAGS.TAILWIND,
+        level: "Advanced",
+    },
+]
+
+---
+<table class="min-w-full divide-y divide-gray-200">
+    <tbody>
+        {tableElements.map((element) => (
+        <tr>
+            <td>
+                <span class={`flex items-center gap-x-2 rounded-full text-xs ${element.tag.class} py-1 px-2`}>
+                    <element.tag.icon class="w-6 h-6" />
+                    {element.tag.name}
+                </span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-yellow-500">
+                {element.level}
+            </td>
+        </tr>
+        ))}
+    </tbody>
+</table>

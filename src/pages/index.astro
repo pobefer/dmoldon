@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+import AboutMe from "../components/AboutMe.astro"
+import Briefcase from "../components/Icons/Briefcase.astro"
+import CodeIcon from "../components/Icons/Code.astro"
+import Experience from "../components/Experience.astro"
+import ProfileCheck from "../components/Icons/ProfileCheck.astro"
+import Projects from "../components/Projects.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import Hero from "../components/Hero.astro"
+import TableSkills from "../components/TableSkills.astro"
+import Lenguajes from '../components/Lenguajes.astro'
+---
+
+<Layout
+  title="Porfolio de Daniel Moldon Redondo - Desarrollador y Data Engineer"
+  description="Contrata a Daniel para crear tu aplicación web o móvil o experiencia d eanalitica de datos. Desarrollador Web."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Briefcase class="size-8" />
+        Expertise
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="skills">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Skills
+      </h2>
+      <TableSkills />
+    </SectionContainer>
+
+    <SectionContainer id="Lenguages">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Lenguages
+      </h2>
+      <Lenguajes />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        About me
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
+</Layout>

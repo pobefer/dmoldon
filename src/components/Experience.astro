@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Currently",
+    title: "TL Big Data Engineer",
+    company: "Mecalux S.A.",
+    description: "As a TL Data Engineer, I lead a team of proficient professionals, spearheading initiatives to capitalize on customer insights and deploy sophisticated algorithms. Through this role, I have successfully pioneered solutions that streamline logistics operations, with a specific emphasis on enhancing control over robotic systems. My achievements include guiding the team to deliver significant outcomes, collaborating closely with stakeholders to identify precise technical needs, and driving innovation in data-driven decision-making methodologies."
+  },
+  {
+    date: "Currently",
+    title: "TL Big Data Engineer",
+    company: "Mecalux S.A.",
+    description: "As a TL Data Engineer, I lead a team of proficient professionals, spearheading initiatives to capitalize on customer insights and deploy sophisticated algorithms. Through this role, I have successfully pioneered solutions that streamline logistics operations, with a specific emphasis on enhancing control over robotic systems. My achievements include guiding the team to deliver significant outcomes, collaborating closely with stakeholders to identify precise technical needs, and driving innovation in data-driven decision-making methodologies."
+  },
+  {
+    date: "Currently",
+    title: "TL Big Data Engineer",
+    company: "Mecalux S.A.",
+    description: "As a TL Data Engineer, I lead a team of proficient professionals, spearheading initiatives to capitalize on customer insights and deploy sophisticated algorithms. Through this role, I have successfully pioneered solutions that streamline logistics operations, with a specific emphasis on enhancing control over robotic systems. My achievements include guiding the team to deliver significant outcomes, collaborating closely with stakeholders to identify precise technical needs, and driving innovation in data-driven decision-making methodologies."
+  },
+]
+
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
